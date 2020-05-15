@@ -11,3 +11,8 @@ RxJs e Subject (Debounce pra melhorar a perfomance de filtros de texto)
 --------------
 photo-list.component.html
 photo-list.component.ts
+
+paginação
+------------
+PhotoListResolver
+
