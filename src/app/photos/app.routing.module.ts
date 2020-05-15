@@ -4,9 +4,16 @@ import { Routes, RouterModule } from '@angular/router'
 import { PhotoListComponent } from './photo-list/photo-list.component'
 import { PhotoFormComponent } from './photo-form/photo-form.component'
 import { NotFoundComponent } from '../errors/not-found/not-found.component'
+import { PhotoListResolver } from './photo-list/photo-list.resolver'
 
 const routes: Routes = [
-    { path: 'user/:username', component: PhotoListComponent },
+    { 
+        path: 'user/:username', 
+        component: PhotoListComponent, 
+        resolve: {
+            photos: PhotoListResolver // manda pro component PhotoListComponent já com a lista de photos ou vazio
+        }
+    }, 
     { path: 'p/add', component: PhotoFormComponent },
     { path: '**', component: NotFoundComponent }
 ]

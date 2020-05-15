@@ -1,1 +1,19 @@
-<ap-photos [photos]="photos"></ap-photos>
+<div class="text-center mt-3 mb-3">
+    <form>
+        <input
+            class="rounded"
+            type="search"
+            placeholder="search..."
+            autofocus
+            (keyup)="debounce($event.target.value)"> <!--event binding (vai da view po component)-->
+    </form>
+</div>
+
+ <!--expression language (valor que vem do component))-->
+{{filter}}
+
+<!--data binding [photos] (vai do component pra view)-->
+<!-- pipe customizado que recebe 2 parametros 
+photos: lista de fotos
+filter: critério de filtragem das fotos-->
+<ap-photos [photos]="photos | filterByDescription: filter"></ap-photos>

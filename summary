@@ -1,0 +1,13 @@
+Data Binding / event Binding
+----------------------------
+photo-list.component.html
+
+Resolvers
+-------
+app.routing.module.ts
+PhotoListResolver
+
+RxJs e Subject (Debounce pra melhorar a perfomance de filtros de texto)
+--------------
+photo-list.component.html
+photo-list.component.ts
