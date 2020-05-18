@@ -16,7 +16,6 @@ export class PhotoListComponent implements OnInit, OnDestroy {
   // o tela de photo-list tem um property binding desse hasMore 
   hasMore: boolean = true;
   currentPage: number = 1;
-  itemsPerPage = 12;
   username: string = '';
 
   constructor(private activatedRoute: ActivatedRoute, private photoService: PhotoService) {}
