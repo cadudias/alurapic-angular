@@ -29,3 +29,6 @@ Remover padding (no-gutters)
 -------------------------------
 photos.component.ts
 
+Card com ng-content pra mostrar um conteudo dentro de um componente
+------------------
+card.component.html - <ng-content></ng-content>
