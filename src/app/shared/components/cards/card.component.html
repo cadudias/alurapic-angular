@@ -1,8 +1,6 @@
-
 <div class="card border-light text-center">
-    <h4 class="card-header">TITULO DO CARD</h4>
+    <h4 class="card-header" *ngIf="title">{{ title }}</h4>
     <div class="card-block text-justify">
-        <!-- aqui entra o conteúdo -->
         <ng-content></ng-content>
     </div>
 </div>

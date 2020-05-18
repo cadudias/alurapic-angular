@@ -7,13 +7,13 @@ export class FilterByDescription implements PipeTransform
     // photos - em quem vamos aplicar a transformação
     // 2 parametro: default é ...args: any[] - um array com todos os parametros que forem passados
     transform(photos: Photo[], descriptionQuery: string) {
-        descriptionQuery = descriptionQuery.trim().toLocaleLowerCase()
+        descriptionQuery = descriptionQuery.trim().toLowerCase()
 
         if(descriptionQuery)
         {
             // pra cada foto verifica se a descricao contem o criterio de filtragem que foi passado
             return photos.filter(photo => 
-                photo.description.toLocaleLowerCase().includes(descriptionQuery))
+                photo.description.toLowerCase().includes(descriptionQuery))
         }else{
             return photos
         }

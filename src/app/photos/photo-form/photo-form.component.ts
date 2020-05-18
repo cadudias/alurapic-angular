@@ -4,6 +4,10 @@ import { Component, OnInit } from '@angular/core';
   selector: 'ap-photo-form',
   templateUrl: './photo-form.component.html'
 })
-export class PhotoFormComponent {
+export class PhotoFormComponent implements OnInit {
 
+  constructor() { }
+
+  ngOnInit() {
+  }
 }

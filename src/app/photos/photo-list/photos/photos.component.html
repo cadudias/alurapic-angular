@@ -5,7 +5,7 @@
 <ol class="list-unstyled">
   <li *ngFor="let cols of rows" class="row no-gutters">
       <div *ngFor="let photo of cols" class="col-4">
-        <ap-card>
+        <ap-card [title]="photo.description">
             <ap-photo
                 [url]="photo.url"
                 [description]="photo.description">

@@ -1,6 +1,7 @@
 Data Binding / event Binding
 ----------------------------
-photo-list.component.html
+event binding e data binding - photo-list.component.html
+data binding - photos.component.ts - [title]="photo.description"
 
 Resolvers
 -------
@@ -32,3 +33,8 @@ photos.component.ts
 Card com ng-content pra mostrar um conteudo dentro de um componente
 ------------------
 card.component.html - <ng-content></ng-content>
+
+Output property - Comunicação entre compoennet pai e filho
+-------------------------
+card-component.ts
+photo-list.component.ts
