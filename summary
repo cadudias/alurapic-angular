@@ -24,3 +24,8 @@ photo-list.component.ts
 
 Load More button Scroll (soon)
 --------------------
+
+Remover padding (no-gutters)
+-------------------------------
+photos.component.ts
+
