@@ -15,5 +15,9 @@
 <!--data binding [photos] (vai do component pra view)-->
 <!-- pipe customizado que recebe 2 parametros 
 photos: lista de fotos
-filter: critério de filtragem das fotos-->
+filter: critério de filtragem das fotos-->~
+
 <ap-photos [photos]="photos | filterByDescription: filter"></ap-photos>
+
+<!-- chama o metodo load que carrega mais fotos e pode ou não alterar o valor de hasMore -->
+<ap-load-button (click)="load()" [hasMore]="hasMore"></ap-load-button>

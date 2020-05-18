@@ -16,3 +16,11 @@ paginação
 ------------
 PhotoListResolver
 
+Load More button (esse jeito nao é tao botao pq aparece o botao mesmo se nao tem mais itens pra carregar)
+--------------------
+load-button.component.ts
+photo-list.component.html
+photo-list.component.ts
+
+Load More button Scroll (soon)
+--------------------
