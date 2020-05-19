@@ -49,3 +49,39 @@ SubModules
 ---------
 declarations - um modulo deve declarar seus compoenetes para que outros modulos possam usa-lo (nao precisar ter selector)
 exports - é só quando precisamos ter acesso NO TEMPLATE de outro componente fora desse modulo (tem selector)
+
+Observables
+-----------
+AuthService - return this.http.post(API_URL + '/user/login', { userName, password } )
+SignInComponent - this.authService
+            .authenticate(userName, password)
+            .subscribe( // nos isncrevemos no observable pra que ele seja disparado
+                () => console.log('autenticado'),
+                err => {
+                    console.log(err);
+                    this.loginForm.reset();
+                }
+            );
+
+Navegação rotas
+---------------------
+SignInComponent - this.router.navigate(['user', userName])
+primeiro param, rota, segundo param o que vem depois da rota
+evitar o navigateByUrl pra nao ficar concatenando coisas
+
+Verificar se a plataforma é bowser pra evitar problemas acessando nativeElements em server side rendering
+-----------------------------------------------------
+platform-detector.service.ts
+
+
+Acesso do header de resposta
+-----------------------------
+https://cursos.alura.com.br/course/angular-autenticacao/task/40501
+no cabecalho da requisicao http vem um x-access-token
+é um cracha da pessoa logada
+explicacao de PIPE !!!!! - quem realiza um subscribe de um observable já recebe transformações fitas com o pipe
+explicacao de TAP !!!! - gravar valores, mostrar em console
+
+
+
+

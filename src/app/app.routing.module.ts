@@ -11,7 +11,7 @@ import { SignInComponent } from './home/signin/signin.component'
 const routes: Routes = [
     { path: '', component: SignInComponent },
     { 
-        path: 'user/:username', 
+        path: 'user/:userName', 
         component: PhotoListComponent, 
         resolve: {
             photos: PhotoListResolver // manda pro component PhotoListComponent já com a lista de photos ou vazio

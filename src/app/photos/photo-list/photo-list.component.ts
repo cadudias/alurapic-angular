@@ -14,12 +14,12 @@ export class PhotoListComponent implements OnInit {
   // o tela de photo-list tem um property binding desse hasMore 
   hasMore: boolean = true
   currentPage: number = 1
-  username: string = ''
+  userName: string = ''
 
   constructor(private activatedRoute: ActivatedRoute, private photoService: PhotoService) {}
 
   ngOnInit(): void {
-    this.username = this.activatedRoute.snapshot.params.username
+    this.userName = this.activatedRoute.snapshot.params.userName
     this.photos = this.activatedRoute.snapshot.data['photos']
   }
 
@@ -28,7 +28,7 @@ export class PhotoListComponent implements OnInit {
     // a cada clique adiciona uma pagina pra buscar mais dados
     // ++this.currentPage - ja carregou uma pagina, se esta tentando carregar mais ja deve ser a segunda
     this.photoService
-      .listFromUserPaginated(this.username, ++this.currentPage)
+      .listFromUserPaginated(this.userName, ++this.currentPage)
       .subscribe(photos => {
           // desse jeito atribuimos um novo valor pra photos e o angular consegue
           // detectar um changed nessa propriedade e atualizar a lista

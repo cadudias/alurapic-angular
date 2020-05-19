@@ -1,17 +1,16 @@
 <h4 class="text-center">Login</h4>
 
-<form class="form mt-4" [formGroup]='logInForm'>
-
+<form class="form mt-4" [formGroup]='loginForm' (submit)="login()">
     <div class="form-group">
         <!-- formControlName - diretiva do reactiveForms -->
-        <input 
+        <input #userNameInput
             formControlName='userName'
             class="form-control" 
             placeholder="user name" 
             autofocus>  
 
         <ap-validation-message
-            *ngIf="logInForm.get('userName').errors?.required"
+            *ngIf="loginForm.get('userName').errors?.required"
             text="User name is required!">
         </ap-validation-message> 
     </div>
@@ -24,13 +23,13 @@
             placeholder="password">  
 
         <ap-validation-message
-            *ngIf="logInForm.get('password').errors?.required"
+            *ngIf="loginForm.get('password').errors?.required"
             text="Password is required!">
         </ap-validation-message>         
     </div>
 
     <button 
-        [disabled]="logInForm.invalid"
+        [disabled]="loginForm.invalid"
         type="submit" 
         class="btn btn-primary btn-block">
         login
