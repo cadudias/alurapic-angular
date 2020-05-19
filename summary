@@ -38,3 +38,9 @@ Output property - Comunicação entre compoennet pai e filho
 -------------------------
 card-component.ts
 photo-list.component.ts
+
+Diretivas
+---------------
+darken-on-hover.component.ts
+photos.component.html
+apDarkenOnHover brigthness='20%' - escrevendo errado ele nem da erro

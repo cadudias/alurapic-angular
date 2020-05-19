@@ -1,6 +1,7 @@
 
-<!--$event = valor digitado no input e joga pro filter do photo-list.compoennt-->
-<ap-search (onTyping)="filter = $event"></ap-search>
+<!--$event = valor digitado no input e joga pro filter do photo-list.compoennt
+[value]="filter" - limpa-->
+<ap-search (onTyping)="filter = $event" [value]="filter"></ap-search>
 
  <!--expression language (valor que vem do component)) 
 -->
