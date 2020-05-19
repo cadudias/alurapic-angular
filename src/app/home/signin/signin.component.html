@@ -10,10 +10,10 @@
             placeholder="user name" 
             autofocus>  
 
-        <small *ngIf="logInForm.get('userName').errors?.required"
-            class="text-danger d-block mt-2">
-            User name is required!
-        </small>
+        <ap-validation-message
+            *ngIf="logInForm.get('userName').errors?.required"
+            text="User name is required!">
+        </ap-validation-message> 
     </div>
 
     <div class="form-group">
@@ -23,10 +23,10 @@
             class="form-control" 
             placeholder="password">  
 
-        <small *ngIf="logInForm.get('password').errors?.required"
-            class="text-danger d-block mt-2">
-            User name is required!
-        </small>         
+        <ap-validation-message
+            *ngIf="logInForm.get('password').errors?.required"
+            text="Password is required!">
+        </ap-validation-message>         
     </div>
 
     <button 
