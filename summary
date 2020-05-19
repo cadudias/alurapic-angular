@@ -44,3 +44,8 @@ Diretivas
 darken-on-hover.component.ts
 photos.component.html
 apDarkenOnHover brigthness='20%' - escrevendo errado ele nem da erro
+
+SubModules
+---------
+declarations - um modulo deve declarar seus compoenetes para que outros modulos possam usa-lo (nao precisar ter selector)
+exports - é só quando precisamos ter acesso NO TEMPLATE de outro componente fora desse modulo (tem selector)
