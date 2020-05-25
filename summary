@@ -83,5 +83,7 @@ explicacao de PIPE !!!!! - quem realiza um subscribe de um observable já recebe
 explicacao de TAP !!!! - gravar valores, mostrar em console
 
 
-
+CustomValidators
+-----------------
+LowerCaseValidator
 
