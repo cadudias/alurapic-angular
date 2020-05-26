@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { lowerCaseValidator } from 'src/app/shared/validators/lower-case.validator';
+import { NewUser } from './new-user';
 
 @Component({
     templateUrl: './signup.component.html'
@@ -44,5 +45,12 @@ export class SignUpComponent implements OnInit{
                 ]
             ]
        })
+    }
+
+    signup() 
+    {
+        const newUser = this.signupForm.getRawValue() as NewUser;
+
+        
     }
 }
