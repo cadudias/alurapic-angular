@@ -82,8 +82,6 @@ no cabecalho da requisicao http vem um x-access-token
 explicacao de PIPE !!!!! - quem realiza um subscribe de um observable já recebe transformações fitas com o pipe
 explicacao de TAP !!!! - gravar valores, mostrar em console
 
-
-<<<<<<< HEAD
 BehaviourSubject vs Subject
 -------------------------------
 no Subject informamos quando ele vai disparar via .next()
@@ -99,11 +97,15 @@ Async pipe
 --------------------
 https://cursos.alura.com.br/course/angular-autenticacao/task/40675
 
-=======
+
 CustomValidators
 -----------------
 LowerCaseValidator
->>>>>>> 95a43f89294a7a57f91899caf7ebf8ec772ebbd1
+
+
+Async Custom CustomValidators
+----------------------
+user-not-taken-validator
 
 Route Guard
 ------------

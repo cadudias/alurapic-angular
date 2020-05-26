@@ -30,6 +30,11 @@
     <div class="form-group">
         <input formControlName="userName" class="form-control" placeholder="user name">
         <ap-validation-message
+            text="Username already taken"
+            *ngIf="signupForm.get('userName').errors?.userNameTaken">
+        </ap-validation-message>
+        <small *ngIf="signupForm.get('userName').valid" class="text-success">User available</small>
+        <ap-validation-message
             *ngIf="signupForm.get('userName').errors?.required"
             text="Username is required!">
         </ap-validation-message>
@@ -63,7 +68,7 @@
         </ap-validation-message>
     </div>
 
-    <button class="btn btn-primary btn-block">Register</button>
+    <button [disabled]="signupForm.invalid || signupForm.pending" class="btn btn-primary btn-block">Register</button>
 
     <p>Already a user? <a [routerLink]="['']">Sign In!</a></p>
 </form>
