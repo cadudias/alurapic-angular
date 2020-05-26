@@ -87,3 +87,6 @@ CustomValidators
 -----------------
 LowerCaseValidator
 
+Async Custom CustomValidators
+----------------------
+user-not-taken-validator
