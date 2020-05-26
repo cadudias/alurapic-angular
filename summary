@@ -82,11 +82,37 @@ no cabecalho da requisicao http vem um x-access-token
 explicacao de PIPE !!!!! - quem realiza um subscribe de um observable já recebe transformações fitas com o pipe
 explicacao de TAP !!!! - gravar valores, mostrar em console
 
+BehaviourSubject vs Subject
+-------------------------------
+no Subject informamos quando ele vai disparar via .next()
+no BehaviourSubject ja informamos um padrao que vai ser emitido logo na criacao dele
+O behaviour é mais poderoso pq ele emite um valor mas esse valor continua sendo emitido para que
+quem fizer subscribe mesmo que depois da emissao possa continuar escutando essa emissao
+
+user.service.ts
+header.component.ts
+
+
+Async pipe
+--------------------
+https://cursos.alura.com.br/course/angular-autenticacao/task/40675
+
 
 CustomValidators
 -----------------
 LowerCaseValidator
 
+
 Async Custom CustomValidators
 ----------------------
 user-not-taken-validator
+
+Route Guard
+------------
+app.routing.module.ts
+AuthGuard
+
+RouterLink
+------------
+diretiva do RouterModule que usa o angular pra acessar rotas na aplicacao sem recarregar toda a pagina de novo
+header.component.html

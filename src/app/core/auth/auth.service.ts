@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
 import { Usuario } from './usuario';
 import { Observable } from 'rxjs';
-import { TokenService } from './token.service';
+import { UserService } from '../user/user.service';
 
 const API_URL = 'http://localhost:3000';
 
@@ -14,7 +14,7 @@ export class AuthService
 {
     constructor(
         private http: HttpClient,
-        private tokenService: TokenService
+        private userService: UserService
     ) { }
 
     authenticate(userName: string, password: string): Observable<Usuario> {
@@ -27,7 +27,7 @@ export class AuthService
                 token: res.token
             }
 
-            this.tokenService.setToken(usuarioAutenticado.token);
+            this.userService.setToken(usuarioAutenticado);
 
             return usuarioAutenticado
         }))
