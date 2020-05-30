@@ -15,10 +15,9 @@ import { HeaderModule } from './core/core.module';
   imports: [
     BrowserModule,
     PhotosModule,
-    AppRoutingModule,
     ErrorsModule,
-    HomeModule,
-    HeaderModule
+    HeaderModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -116,3 +116,26 @@ RouterLink
 ------------
 diretiva do RouterModule que usa o angular pra acessar rotas na aplicacao sem recarregar toda a pagina de novo
 header.component.html
+
+Children Routes
+-----------------
+o component home home é carregado primeiro na rota 'http://localhost:4200'
+home.component.html - usamos o router-outlet aqui pra carregar os componentes
+
+ng nuild --prod
+----------------
+runtime pro angular
+outros arquivos estaticos
+gera uma pasta dist uma pasta que vai ser colocada no servidor
+
+Lazy loading e code spliting
+----------------------------
+quais modulos serao separados e carregados por demanda
+
+home.routing.module.ts 
+ - forChild é usada no carregento dos filhos de uma rota
+ - só o pai pode usar o forRoot
+
+TIRAR O MODULE CARREGADO COM LAZY LOADING DO APP.MODULE SENAO ELE VAI SER CARREGADO
+
+o homemodule importa o home.routing.module

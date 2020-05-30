@@ -1,6 +1,6 @@
-<form [formGroup]="signupForm" class="form mt-4">
+<form [formGroup]="signupForm" class="form mt-4" (submit)="signup()">
     <div class="form-group">
-        <input formControlName="email" class="form-control" placeholder="email" autofocus>
+        <input #emailInput formControlName="email" class="form-control" placeholder="email" autofocus>
         <ap-validation-message
             *ngIf="signupForm.get('email').errors?.required"
             text="Email is required!">

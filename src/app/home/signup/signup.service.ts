@@ -12,6 +12,11 @@ export class SignUpService {
 
         return this.http.get(API_URL + '/user/exists/' + userName);
     }
+
+    signup(newUser)
+    {
+        return this.http.post(API_URL + '/user/signup', newUser)
+    }
 }
 
 

@@ -5,18 +5,17 @@ import { PhotoListComponent } from './photos/photo-list/photo-list.component'
 import { PhotoFormComponent } from './photos/photo-form/photo-form.component'
 import { NotFoundComponent } from './errors/not-found/not-found.component'
 import { PhotoListResolver } from './photos/photo-list/photo-list.resolver'
-import { SignInComponent } from './home/signin/signin.component'
-import { SignUpComponent } from './home/signup/signup.component'
-
-import { AuthGuard } from './core/auth/auth.guard'
 
 const routes: Routes = [
-    { 
-        path: '', 
-        component: SignInComponent,
-        canActivate: [AuthGuard]
+    {
+        path: '',
+        pathMatch: 'full', // tem que ser a rota especifica do path, sem isso se fosse qualquer rota ele ia cair aqui
+        redirectTo: 'home', // se for a rota em branco chama a home
     },
-    { path: 'signup', component: SignUpComponent },
+    {
+        path: 'home',
+        loadChildren: './home/home.module#HomeModule', // quando a rota home for acessada o angular carrega esse modulo
+    },
     { 
         path: 'user/:userName', 
         component: PhotoListComponent, 
