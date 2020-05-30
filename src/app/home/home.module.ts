@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { SignUpComponent } from './signup/signup.component';
 import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './home.routing.module';
+import { SignUpService } from './signup/signup.service';
 
 @NgModule({
     declarations: [ 
@@ -21,6 +22,9 @@ import { HomeRoutingModule } from './home.routing.module';
         ValidationMessageModule,
         RouterModule,
         HomeRoutingModule
+    ],
+    providers: [
+        SignUpService // se algum compnent precisar desse servico injetado ele vai estar disponivel pra todos os modulos que o home module usa
     ]
 })
 export class HomeModule {  }

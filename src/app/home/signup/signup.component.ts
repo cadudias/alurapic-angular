@@ -8,7 +8,8 @@ import { Router } from '@angular/router';
 import { PlatformDetectorService } from 'src/app/core/platform-detector/platform-detector.service';
 
 @Component({
-    templateUrl: './signup.component.html'
+    templateUrl: './signup.component.html',
+    providers: [ UserNotTakenValidatorService ] // esse component que prove o servico
 })
 export class SignUpComponent implements OnInit{ 
 

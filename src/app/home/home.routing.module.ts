@@ -7,7 +7,7 @@ import { SignUpComponent } from '../home/signup/signup.component'
 import { AuthGuard } from '../core/auth/auth.guard'
 import { HomeComponent } from '../home/home.component'
 
-// ESSAS ROTAS SAO SUBORDINADAS AS ROTAS DO PAI
+// ESSAS ROTAS SAO SUBORDINADAS AS ROTAS DO PAI APP.ROUTING.MODULE
 const routes: Routes = [
     { 
         path: '', 

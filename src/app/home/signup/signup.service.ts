@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 const API_URL = "http://localhost:3000";
 
-@Injectable({ providedIn: 'root' })
+@Injectable()
 export class SignUpService {
 
     constructor(private http: HttpClient) {}

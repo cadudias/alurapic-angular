@@ -139,3 +139,8 @@ home.routing.module.ts
 TIRAR O MODULE CARREGADO COM LAZY LOADING DO APP.MODULE SENAO ELE VAI SER CARREGADO
 
 o homemodule importa o home.routing.module
+
+Providers
+-----------
+homeModule
+SignUpComponent
