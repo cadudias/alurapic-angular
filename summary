@@ -144,3 +144,9 @@ Providers
 -----------
 homeModule
 SignUpComponent
+
+Upload de arquivos
+---------------------
+<input formControlName="file" type="file" accept="image/*" (change)="file = Sevent.target.files[0]">
+photo-form.component.ts
+photo.service.ts

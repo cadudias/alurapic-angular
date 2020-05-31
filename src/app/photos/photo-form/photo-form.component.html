@@ -1,4 +1,39 @@
-<p>
-    photo-form works!
-  </p>
-  
+<div class="container">
+  <form [formGroup]="photoForm" class="row" (submit)="upload()">
+    <div class="col-md-6 text-center">
+      <input formControlName="file" type="file" accept="image/*" (change)="file = Sevent.target.files[0]">
+      <ap-validation-message 
+        text="Please, select a photo" 
+        *ngIf="photoForm.get('file').errors?.required">
+      </ap-validation-message>
+    </div>
+
+    <div class="col-md-6">
+      <div class="form-group">
+        <textarea 
+          formControlName="description"
+          class="form-control form-control-sm" 
+          placeholder="photo description"></textarea>      
+          <ap-validation-message 
+          text="Max length is 300" 
+          *ngIf="photoForm.get('description').errors?.maxlength">
+        </ap-validation-message> 
+      </div>
+
+      <div class="form-group">
+        <label class="text-muted">
+          Allow comments
+          <input formControlName="allowComments" type="checkbox">
+        </label>
+      </div>
+
+      <button 
+        [disabled]="photoForm.invalid" 
+        type="submit" class="btn btn-primary btn-block">
+        Upload
+      </button>
+
+      <a class="btn btn-secondary btn-block">Cancel</a>
+    </div>
+  </form>
+</div>
