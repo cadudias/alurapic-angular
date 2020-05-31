@@ -8,7 +8,7 @@ import { HttpHeaderResponse } from "@angular/common/http";
 import { HttpProgressEvent } from "@angular/common/http";
 import { HttpResponse } from "@angular/common/http";
 import { HttpUserEvent } from "@angular/common/http";
-import { TokenService } from "./token.service";
+import { TokenService } from "./token/token.service";
 
 @Injectable()
 export class RequestInterceptor implements HttpInterceptor {
