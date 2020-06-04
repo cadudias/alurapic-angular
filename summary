@@ -150,3 +150,23 @@ Upload de arquivos
 <input formControlName="file" type="file" accept="image/*" (change)="file = Sevent.target.files[0]">
 photo-form.component.ts
 photo.service.ts
+
+
+Testes
+===============
+
+fakeAsync e tick para testes assincronos mde http
+---------------------------------------
+auth.service.spec.ts
+
+
+Teste de componente
+------------------------
+footer.component.spec.ts
+
+boa pratica da criacao de componentes
+----------------------------
+compileComponents é async entao precisamos encapsular ele num async e nao o fakeAsync que me possibilita controlar a passagem de tempo em um teste
+
+teste com rotas
+----------------

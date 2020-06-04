@@ -14,12 +14,12 @@ describe('o servico token service ', () => {
         expect(service).toBeTruthy()
     })
 
-    // it('deve guardar o token', () => {
-    //     service.setToken(token)
-    //     expect(service.hasToken()).toBeTruthy()
-    //     // uma boa prática é testar o valor e nao a variavel
-    //     expect(service.getToken()).toBe("testetoken")
-    // })
+    it('deve guardar o token', () => {
+        service.setToken(token)
+        expect(service.hasToken()).toBeTruthy()
+        // uma boa prática é testar o valor e nao a variavel
+        expect(service.getToken()).toBe("testetoken")
+    })
 
     // it('deve remover o token', () => {
     //     service.setToken(token)

@@ -27,7 +27,7 @@ export class AuthService
                 token: res.token
             }
 
-            this.userService.setToken(usuarioAutenticado);
+            this.userService.setToken(usuarioAutenticado.token);
 
             return usuarioAutenticado
         }))

@@ -10,14 +10,14 @@ export class TokenService {
     }
 
     setToken(token) {
-        localStorage.setItem(this.chave, JSON.stringify(token))
+        localStorage.setItem(this.chave, token)
     }
 
     getToken() {
-        return window.localStorage.getItem(this.chave);
+        return localStorage.getItem(this.chave);
     }
 
     removeToken() {
-        window.localStorage.removeItem(this.chave);
+        localStorage.removeItem(this.chave);
     }
 }
