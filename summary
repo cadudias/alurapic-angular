@@ -164,9 +164,18 @@ Teste de componente
 ------------------------
 footer.component.spec.ts
 
+
 boa pratica da criacao de componentes
 ----------------------------
 compileComponents é async entao precisamos encapsular ele num async e nao o fakeAsync que me possibilita controlar a passagem de tempo em um teste
 
+
 teste com rotas
 ----------------
+const navigateSpy = spyOn(router, 'navigate')
+expect(navigateSpy).toHaveBeenCalledWith([''])
+
+
+spy de metodo que retorna observable
+---------------------
+const signupSpy = spyOn(signupService, 'signup').and.returnValues(of(null))

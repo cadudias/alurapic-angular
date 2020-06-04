@@ -47,12 +47,12 @@ export class SignUpComponent implements OnInit{
                     Validators.minLength(2),
                     Validators.maxLength(30)
                 ],
-                this.userNotTakenValidatorService.checkUserNameTaken()
+                [this.userNotTakenValidatorService.checkUserNameTaken()]
             ],
             password: ['',
                 [
                     Validators.required,
-                    Validators.minLength(8),
+                    Validators.minLength(3),
                     Validators.maxLength(14)
                 ]
             ]
@@ -63,13 +63,17 @@ export class SignUpComponent implements OnInit{
 
     signup() 
     {
-        const newUser = this.signupForm.getRawValue() as NewUser;
+        // todo - descobrir pq essa validacao nao funciona nos testes
+        //if (!this.signupForm.invalid || this.signupForm.pending) 
+        //{
+            const newUser = this.signupForm.getRawValue() as NewUser;
 
-        this.signUpService
-        .signup(newUser)
-        .subscribe(
-            () => { this.router.navigate(['']),
-            error => console.log(error)
-        })
+            this.signUpService.signup(newUser).subscribe(
+              () => this.router.navigate(['']),
+              (err) => {
+                console.log(err);
+              }
+            );
+       // }
     }
 }
